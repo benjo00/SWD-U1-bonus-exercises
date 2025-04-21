@@ -107,3 +107,44 @@ for (let restaurant of restaurants) {
 
 // TODO: Print a template literal
 
+
+
+
+let hotDogPalace = {
+	name: "King Jormy Jojo's Dogs",
+	location: "Potato Alley",
+	adultTicketPrice: 300,
+	childTicketPrice: 500,
+	famousFeatures: ["Reverse potato", "Nightmare hotdog", "Hotdog of forgotten dreams"],
+};
+
+let planet = {
+	name: "Mars",
+	location: "Solar System",
+	adultTicketPrice: 10000000,
+	childTicketPrice: "free",
+	famousFeatures: ["red dirt", "Phobos and demos, the oblong, goofy looking rulers of the Martian night sky", "The great face of mars"],
+};
+
+let places = [hotDogPalace, planet];
+
+for (let i = 0; i < places.length; i ++) {
+	console.log(places[i]);
+
+
+}
+
+
+for (let place in places) {
+	if (Array.isArray(places[place])) {
+		for (let i = 0; i < places[place].length; i++) {
+			console.log(place[places][i]);
+		}
+	}
+}
+
+
+
+for (let place of places) {
+	console.log(` Any time you find yourself craving the mind bending experiences of the world, check out ${place.name} in ${place.location}, truly will make your soul fly through outer space through its ${place.famousFeatures[0]}, wild and crazy ${place.famousFeatures[1]}, and flapjawed ${place.famousFeatures[2]}. Tickets cost $${place.adultTicketPrice} for beings that are over 9 feet tall, and/or at least 4000 years old, and $${place.childTicketPrice} for everyone else. `)
+}
